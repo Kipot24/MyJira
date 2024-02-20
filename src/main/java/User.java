@@ -1,6 +1,6 @@
 public class User {
-    int userId;
-    String userName;
+    private int userId;
+    private String userName;
 
     public User(int userId, String userName) {
         this.userId = userId;
@@ -21,5 +21,13 @@ public class User {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId=" + userId +
+                ", userName='" + userName + '\'' +
+                '}';
     }
 }

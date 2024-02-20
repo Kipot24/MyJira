@@ -1,18 +1,16 @@
-public class Task {
-    int taskId;
-    String taskType;
-    String taskName;
-    String taskComments;
-    String taskAssignedTo;
-    private Type type;
+public abstract class Task {
+    private int taskId;
+    private String taskName;
+    private String taskComments;
+    private String taskAssignedTo;
+    private String description;
 
-    public Task(int taskId, String taskType, String taskName, String taskComments, String taskAssignedTo, Type type) {
+    public Task(int taskId, String taskName, String taskComments, String taskAssignedTo, String description) {
         this.taskId = taskId;
-        this.taskType = taskType;
         this.taskName = taskName;
         this.taskComments = taskComments;
         this.taskAssignedTo = taskAssignedTo;
-        this.type = type;
+        this.description = description;
     }
 
     public int getTaskId() {
@@ -21,14 +19,6 @@ public class Task {
 
     public void setTaskId(int taskId) {
         this.taskId = taskId;
-    }
-
-    public String getTaskType() {
-        return taskType;
-    }
-
-    public void setTaskType(String taskType) {
-        this.taskType = taskType;
     }
 
     public String getTaskName() {
@@ -55,24 +45,22 @@ public class Task {
         this.taskAssignedTo = taskAssignedTo;
     }
 
-    public Type getType() {
-        return type;
+    public String getDescription() {
+        return description;
     }
 
-    public void setType(Type type) {
-        this.type = type;
+    public void setDescription(String description) {
+        this.description = description;
     }
-
 
     @Override
     public String toString() {
         return "Task{" +
                 "taskId=" + taskId +
-                ", taskType='" + taskType + '\'' +
                 ", taskName='" + taskName + '\'' +
                 ", taskComments='" + taskComments + '\'' +
                 ", taskAssignedTo='" + taskAssignedTo + '\'' +
-                ", type=" + type +
+                ", description='" + description + '\'' +
                 '}';
     }
 }
