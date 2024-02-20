@@ -1,12 +1,16 @@
-public class Project {
-    int projectId;
-    String projectName;
-    String projectDescription;
+import java.util.List;
 
-    public Project(int projectId, String projectName, String projectDescription) {
+public class Project {
+    private int projectId;
+    private String projectName;
+    private String projectDescription;
+    private List<Board> boards;
+
+    public Project(int projectId, String projectName, String projectDescription, List<Board> boards) {
         this.projectId = projectId;
         this.projectName = projectName;
         this.projectDescription = projectDescription;
+        this.boards = boards;
     }
 
     public int getProjectId() {
@@ -31,5 +35,23 @@ public class Project {
 
     public void setProjectDescription(String projectDescription) {
         this.projectDescription = projectDescription;
+    }
+
+    public List<Board> getBoards() {
+        return boards;
+    }
+
+    public void setBoards(List<Board> boards) {
+        this.boards = boards;
+    }
+
+    @Override
+    public String toString() {
+        return "Project{" +
+                "projectId=" + projectId +
+                ", projectName='" + projectName + '\'' +
+                ", projectDescription='" + projectDescription + '\'' +
+                ", boards=" + boards +
+                '}';
     }
 }
