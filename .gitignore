@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 .idea/
+=======
+>>>>>>> d17dc75 (Task Factory)
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
