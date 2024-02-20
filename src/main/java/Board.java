@@ -1,7 +1,7 @@
 public class Board {
-    int boardId;
-    String boardName;
-    String boardDescription;
+    public int boardId;
+    public String boardName;
+    public String boardDescription;
 
     public Board(int boardId, String boardName, String boardDescription) {
         this.boardId = boardId;
