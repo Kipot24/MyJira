@@ -1,7 +1,11 @@
-public class Story extends Task{
-    String description;
+import java.util.List;
 
-    public Story(int taskId, String taskType, String taskName, String taskComments, String taskAssignedTo, Type type) {
-        super(taskId, taskType, taskName, taskComments, taskAssignedTo, type);
+public class Story extends Task{
+    private List<SubTask> subTasks;
+    private int storyId;
+
+
+    public Story(int taskId, String taskType, String taskName, String taskComments, String taskAssignedTo, description, List<SubTask> subTasks, int storyId) {
+        super(taskId, taskType, taskName, taskComments, taskAssignedTo, description);
     }
 }
