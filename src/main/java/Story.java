@@ -5,7 +5,12 @@ public class Story extends Task{
     private int storyId;
 
 
-    public Story(int taskId, String taskType, String taskName, String taskComments, String taskAssignedTo, description, List<SubTask> subTasks, int storyId) {
-        super(taskId, taskType, taskName, taskComments, taskAssignedTo, description);
+    public Story(int taskId, String taskType, String taskName, String taskComments, String taskAssignedTo, String description, List<SubTask> subTasks, int storyId) {
+        super(taskId,
+                taskType,
+                taskName,
+                taskComments,
+                taskAssignedTo,
+                getDescription());
     }
 }
