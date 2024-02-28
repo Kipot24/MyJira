@@ -1,6 +1,11 @@
-public interface ICustomJiraHandler {
+import java.util.List;
+
+public interface ITaskManager {
     Task createTask(int projectId, int boardId, TaskType type);
-    Project createProject(int projectId, String projectName, String projectDescription);
-    Board createBoard(int boardId, String boardName, String boardDescription);
+    List<Task> getAllTasks(int boardId);
+    Task getTaskById(int taskId);
+    void updateTaskStatus(int taskId, TaskStatus newStatus);
+    Task editTask(int taskId, String newDescription);
+    Task addComment(int taskId, String taskComments);
 
 }
