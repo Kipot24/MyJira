@@ -3,14 +3,17 @@ public abstract class Task {
     private String taskName;
     private String taskComments;
     private String taskAssignedTo;
-    private String description;
+    String description;
+    private TaskType taskType;
 
-    public Task(int taskId, String taskName, String taskComments, String taskAssignedTo, String description) {
+
+    public Task(int taskId, String taskName, String taskComments, String taskAssignedTo, String description, TaskType taskType) {
         this.taskId = taskId;
         this.taskName = taskName;
         this.taskComments = taskComments;
         this.taskAssignedTo = taskAssignedTo;
         this.description = description;
+        this.taskType = taskType;
     }
 
     public int getTaskId() {
@@ -53,6 +56,8 @@ public abstract class Task {
         this.description = description;
     }
 
+
+
     @Override
     public String toString() {
         return "Task{" +
@@ -62,5 +67,13 @@ public abstract class Task {
                 ", taskAssignedTo='" + taskAssignedTo + '\'' +
                 ", description='" + description + '\'' +
                 '}';
+    }
+
+    public TaskType getTaskType() {
+        return taskType;
+    }
+
+    public void setTaskType(TaskType taskType) {
+        this.taskType = taskType;
     }
 }
