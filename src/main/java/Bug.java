@@ -1,12 +1,11 @@
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
+import lombok.NonNull;
 
-@Getter
-@Setter
-@ToString
+@Data
 public class Bug extends Task{
+    @NonNull
     private String priority;
+    @NonNull
     private int severity;
 
 
