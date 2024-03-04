@@ -1,11 +1,9 @@
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
+import lombok.NonNull;
 
-@Getter
-@Setter
-@ToString
+@Data
 public abstract class Task {
+    @NonNull
     private int taskId;
     private String taskName;
     private String taskComments;

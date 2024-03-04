@@ -1,10 +1,7 @@
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
 
-@Getter
-@Setter
-@ToString
+@Data
+
 public class User {
     private int userId;
     private String userName;
@@ -13,6 +10,4 @@ public class User {
         this.userId = userId;
         this.userName = userName;
     }
-
-
 }

@@ -1,12 +1,8 @@
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
 
 import java.util.List;
 
-@Getter
-@Setter
-@ToString
+@Data
 public class Project {
     private int projectId;
     private String projectName;
