@@ -1,7 +1,5 @@
-import lombok.AllArgsConstructor;
 
 import java.util.List;
-@AllArgsConstructor
 
 public class Story extends Task{
     private List<SubTask> subTasks;
