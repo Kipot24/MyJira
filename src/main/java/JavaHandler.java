@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class ProjectHandler implements IProjectManager{
+public class JavaHandler implements IProjectManager, ITaskManager{
 
     @Override
     public Project createProject(int projectId, String projectName, String projectDescription, List<Board> boards) {
@@ -13,7 +13,12 @@ public class ProjectHandler implements IProjectManager{
     }
 
     @Override
-    public Project getProject(int projectId) {
+    public Task createTask(int projectId, int boardId, TaskType type) {
         return null;
+    }
+
+    @Override
+    public void updateTaskStatus(int taskId, TaskStatus newStatus) {
+
     }
 }

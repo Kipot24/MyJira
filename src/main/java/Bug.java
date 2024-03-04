@@ -1,10 +1,3 @@
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-
-@Getter
-@Setter
-@ToString
 public class Bug extends Task{
     private String priority;
     private int severity;
@@ -16,4 +9,27 @@ public class Bug extends Task{
         this.severity = severity;
     }
 
+    public String getPriority() {
+        return priority;
+    }
+
+    public void setPriority(String priority) {
+        this.priority = priority;
+    }
+
+    public int getSeverity() {
+        return severity;
+    }
+
+    public void setSeverity(int severity) {
+        this.severity = severity;
+    }
+
+    @Override
+    public String toString() {
+        return "Bug{" +
+                "priority='" + priority + '\'' +
+                ", severity=" + severity +
+                '}';
+    }
 }

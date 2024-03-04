@@ -1,10 +1,3 @@
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-
-@Getter
-@Setter
-@ToString
 public class Board {
     public int boardId;
     public String boardName;
@@ -16,4 +9,27 @@ public class Board {
         this.boardDescription = boardDescription;
     }
 
+    public int getBoardId() {
+        return boardId;
+    }
+
+    public void setBoardId(int boardId) {
+        this.boardId = boardId;
+    }
+
+    public String getBoardName() {
+        return boardName;
+    }
+
+    public void setBoardName(String boardName) {
+        this.boardName = boardName;
+    }
+
+    public String getBoardDescription() {
+        return boardDescription;
+    }
+
+    public void setBoardDescription(String boardDescription) {
+        this.boardDescription = boardDescription;
+    }
 }
