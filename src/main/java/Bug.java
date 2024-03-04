@@ -3,10 +3,8 @@ public class Bug extends Task{
     private int severity;
 
 
-    public Bug(int taskId, String taskName, String taskComments, String taskAssignedTo, String description, String priority, int severity, TaskType taskType) {
-        super(taskId, taskName, taskComments, taskAssignedTo, description, taskType);
-        this.priority = priority;
-        this.severity = severity;
+    public Bug(int taskId, String taskName, String taskComments, String taskAssignedTo, String description, String priority, int severity) {
+        super(taskId, taskName, taskComments, taskAssignedTo, description);
     }
 
     public String getPriority() {

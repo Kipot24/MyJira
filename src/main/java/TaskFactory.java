@@ -1,25 +1,15 @@
-import static jdk.internal.org.jline.reader.impl.LineReaderImpl.CompletionType.List;
-
 public class TaskFactory {
-    public Task createTask( int taskId, String taskName, String taskComments, String taskAssignedTo, String
-        description, TaskType taskType, String priority, int severity){
+    public Task createTask(TaskType type){
+        Task task = null;
 
-            switch (taskType) {
-                case BUG:
-                    new Bug(taskId,
-                            taskName,
-                            taskComments,
-                            taskAssignedTo,
-                            description,
-                            priority,
-                            severity,
-                            taskType);
-                    break;
-                case STORY:
-                    new Story(taskId, taskName, taskComments, taskAssignedTo, description, List<SubTask>);
-                    break;
-            }
-            return taskType;
+        switch (type){
+            case BUG:
+                task =  new Bug();
+                break;
+            case STORY:
+                task = new Story();
+                break;
         }
+        return task;
     }
 }

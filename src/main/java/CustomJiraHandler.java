@@ -1,4 +1,4 @@
-/* public class CustomJiraHandler implements ITaskManager{
+public class CustomJiraHandler implements ICustomJiraHandler{
 private final TaskFactory taskFactory;
 
     public CustomJiraHandler(TaskFactory taskFactory) {
@@ -21,4 +21,4 @@ private final TaskFactory taskFactory;
     public Board createBoard(int boardId, String boardName, String boardDescription) {
         return new Board(boardId, boardName, boardDescription);
     }
-}*/
+}
