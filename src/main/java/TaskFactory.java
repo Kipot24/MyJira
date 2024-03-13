@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class TaskFactory {
     public Task createTask(int taskId, String taskName, String taskComments, String taskAssignedTo, String
         description, TaskType taskType, String priority, int severity, SubTask subTask){
@@ -17,7 +19,9 @@ public class TaskFactory {
                     taskAssignedTo,
                     description,
                     taskType,
-                    subTask);
+                    List.of(subTask),
+                    subTask.getParentStoryId()
+                    );
         };
         }
     }
